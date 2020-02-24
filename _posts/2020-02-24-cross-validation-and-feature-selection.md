@@ -15,7 +15,7 @@ tags: [Feature Selection, Cross Validation]
 
 交叉验证本质上是对给定的训练数据集进行切分。比如5-fold(即K=5)交叉验证的处理如下：首先将整个数据集等分为5份， 然后在一次轮迭代中使用第一等分用于模型训练过程中的验证集(validation set)， 剩下的4等份数据用于模型训练；第二轮迭代中使用第二等份作为验证集，剩下的用于模型训练，如此迭代5轮结束。 
 
-![5-fold cross validation]{{ "/assets/img/blogs/5fold-cross-validation.png" | relative_url }}, image from [here](http://ethen8181.github.io/machine-learning/model_selection/model_selection.html)
+![5-fold cross validation]({{ "/assets/img/blogs/5fold-cross-validation.png" | relative_url }}), image from [here](http://ethen8181.github.io/machine-learning/model_selection/model_selection.html)
 
 例如用于模型最优参数选择（即模型选择）的伪代码如下：
 
