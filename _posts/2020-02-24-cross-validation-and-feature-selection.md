@@ -191,6 +191,8 @@ avg score: 0.7604872251931075
 换句话说([查看这里][3]):
 > 只有当所有与模型训练相关的各个方面的处理在交叉验证的循环中进行时才能说明交叉验证是**非偏向性的(unbiased)**。这些与模型训练相关的处理包括：特征选择，模型选择，模型参数微调（parameter）等。
 
+代码：https://github.com/y-bai/machine-learning/blob/master/cross-validation-feature-selection.ipynb
+
 
 [1]: https://thatdatatho.com/2018/10/04/cross-validation-the-wrong-way-right-way-feature-selection/
 [2]: https://web.stanford.edu/class/stats202/content/lab11
