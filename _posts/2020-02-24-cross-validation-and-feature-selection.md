@@ -9,7 +9,7 @@ tags: [Feature Selection, Cross Validation, Pearson Correlation]
 
 # 交叉验证
 
-模型在训练的时候往往是**高方差**估计. 从bias-variance tradeoff的角度看， 在有限数据的情况下训练的结果往往是bias较小单varance很大从而造成模型过拟合，因此降低了模型的泛化能力。为了在有限数据集的条件下使得模型尽可能满足泛化能力，提出了交叉验证 (Cross  Validation, CV)，目的是增加模型训练的bias，降低variance, 从而在bias-variance tradeoff的角度上达到一定的平衡，提高模型的泛化能力。换句话说，交叉验证可以表征不同数据集的variance。
+模型在训练的时候往往是**高方差**估计. 从bias-variance tradeoff的角度看， 在有限数据的情况下训练的结果往往是bias较小但varance很大从而造成模型过拟合，因此降低了模型的泛化能力。为了在有限数据集的条件下使得模型尽可能满足泛化能力，提出了交叉验证 (Cross  Validation, CV)，目的是增加模型训练的bias，降低variance, 从而在bias-variance tradeoff的角度上达到一定的平衡，提高模型的泛化能力。换句话说，交叉验证可以表征不同数据集的variance。
 
 ## K-fold 交叉验证的一般步骤
 
@@ -188,7 +188,7 @@ avg score: 0.7604872251931075
 
 如果预处理是样本批量进行，那么这样的预处理就必须在交叉验证循环内进行，比如中心化(centering即使得均值为0)，归一化/标准化(StandardScale)，特征选择等。
 
-话句话说[查看这里][3]:
+换句话说([查看这里][3]):
 > 只有当所有与模型训练相关的各个方面的处理在交叉验证的循环中进行时才能说明交叉验证是**非偏向性的(unbiased)**。这些与模型训练相关的处理包括：特征选择，模型选择，模型参数微调（parameter）等。
 
 
