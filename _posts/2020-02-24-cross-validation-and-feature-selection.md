@@ -55,7 +55,7 @@ for i_param in param_arr:
 
 ## 交叉验证的姿势
 
-那么如何通过交叉验证技术进行特征选择呢？它的过程是否与通过交叉验证技术进行模型选择一样呢？如果我们先在整个数据集上进行特征选择，然后再利用交叉验证进行模型选择，那么这样的过程是否是正确呢？是否人为的引入了偏差(bias)? 在回答这些问题前，我们先了解什么是数据泄漏(data leakage)。
+那么如何通过交叉验证技术进行特征选择呢？它的过程是否与通过交叉验证技术进行模型选择一样呢？如果我们先在整个数据集上进行特征选择，然后再利用交叉验证进行模型选择，那么这样的过程是否是正确呢？是否人为的引入了**偏差(bias)**? 在回答这些问题前，我们先了解什么是数据泄漏(data leakage)。
 
 ### 数据泄漏 (data leakage)
 
@@ -125,6 +125,8 @@ print('avg score: {}'.format(np.mean(kfold_score_arr)))
 avg score: 0.7604787369493251
 ```
 
+在[The wrong way and the right way to do cross-validation][2] 中已经明确说明： **这样错误的方式进行交叉验证会显著的低估真正的错误率(error)。**
+
 ### 交叉验证进行特征选择的正确姿势
 
 正确的做法是，在进行特征选择的时候（也就是计算相关系数的时候）我们不使用整个数据集。相反，在交叉验证的每次循环中**使用训练集进行特征选择**。这样在每次进行特征选择时所使用的数据集不同，那么每次循环选择的特征列表页可能不一样：
@@ -186,8 +188,10 @@ avg score: 0.7604872251931075
 
 如果预处理是样本批量进行，那么这样的预处理就必须在交叉验证循环内进行，比如中心化(centering即使得均值为0)，归一化/标准化(StandardScale)，特征选择等。
 
-# 参考
+话句话说[查看这里][3]:
+> 只有当所有与模型训练相关的各个方面的处理在交叉验证的循环中进行时才能说明交叉验证是**非偏向性的(unbiased)**。这些与模型训练相关的处理包括：特征选择，模型选择，模型参数微调（parameter）等。
 
 
 [1]: https://thatdatatho.com/2018/10/04/cross-validation-the-wrong-way-right-way-feature-selection/
-[2]: [The wrong way and the right way to do cross-validation ](https://web.stanford.edu/class/stats202/content/lab11)
+[2]: https://web.stanford.edu/class/stats202/content/lab11
+[3]: https://www.nodalpoint.com/not-perform-feature-selection/
