@@ -88,10 +88,10 @@ markdown: kramdown
 
 highlighter: rouge
 
-# kramdown:
-#   input: GFM
-#   # math_engine: mathjax
-#   syntax_highlighter: rouge
+kramdown:
+  # input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
 #   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
 #     css_class: 'highlight'
 #     # default_lang: console
