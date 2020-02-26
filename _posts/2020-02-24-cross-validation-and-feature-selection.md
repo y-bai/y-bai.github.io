@@ -5,7 +5,7 @@ categories: [Machine Learning, Feature Selection]
 tags: [Feature Selection, Cross Validation, Pearson Correlation]
 ---
 
-交叉验证通常用于模型选择，那么如何使用交叉验证进行特征选择呢？
+交叉验证通常用于模型选择，那么如何正确使用交叉验证进行特征选择呢？
 
 # 交叉验证
 
