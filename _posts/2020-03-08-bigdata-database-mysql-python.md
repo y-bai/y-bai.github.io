@@ -39,7 +39,7 @@ def mysql_connect_regular(charset='', autocommit=False):
         return None
 ```
 
-这里`autocommit`作为参数传入。当`autocommit=False`时，返回的数据库连接对象`con`是自动提交sql执行的（特别是针对非`SELECT`的查询，这些查询必须要提交到SQL引擎后才被执行，如果在执行过程中出现错误，SQL引擎会自动回退到原始提交事务的文职，保证提交事务的一致性。常见的操作包括`UPDATE`, `DROP`,`CREATE`等操作）。
+这里`autocommit`作为参数传入。当`autocommit=True`时，返回的数据库连接对象`con`是自动提交sql执行的（特别是针对非`SELECT`的查询，这些查询必须要提交到SQL引擎后才被执行，如果在执行过程中出现错误，SQL引擎会自动回退到原始提交事务的位置，保证提交事务的一致性。常见的操作包括`UPDATE`, `DROP`,`CREATE`等操作）。
 
 需要提交的事务SQL代码如下：
 ```python
