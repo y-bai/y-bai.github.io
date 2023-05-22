@@ -1,6 +1,6 @@
 ---
-title: "组学之工具"
-date: 2020-03-04 10:14:00 +0800
+title: "组学之工具-bwa"
+date: 2020-03-09 10:14:00 +0800
 categories: [Genomics, Tools]
 tags: [Omics tools]
 ---
@@ -51,9 +51,9 @@ read alignment: 无论是linear alignment, 还是chimeric alignment, 只要能�
 
 1. [SAMtools: SAM格式的处理利器](https://www.jianshu.com/p/8d01019f33f2)
 
-http://www.bio-info-trainee.com/4452.html
+2. http://www.bio-info-trainee.com/4452.html
 
 
-https://zhuanlan.zhihu.com/p/29456819
+3. https://zhuanlan.zhihu.com/p/29456819
 
-https://www.melbournebioinformatics.org.au/tutorials/tutorials/var_detect_advanced/var_detect_advanced_background/
+4. https://www.melbournebioinformatics.org.au/tutorials/tutorials/var_detect_advanced/var_detect_advanced_background/
